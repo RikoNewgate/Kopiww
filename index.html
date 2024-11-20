@@ -1,82 +1,89 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perkenalan Diri</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-    <div class="container-doang">
-    <!-- NAVBAR -->
-    <div class="container-navbar">
-        <nav>
-            <ul class="ul-navbar">
-                <li class="li-navbar"><a href="#HOME">Beranda</a></li>
-                <li class="li-navbar"><a href="#About">Tentang Saya</a></li>
-                <li class="li-navbar"><a href="#kontak">Kontak Saya</a></li>
-            </ul>
-        </nav>
+  <header id="home">
+    <div class="header-content">
+      <h1>Hello, I'm <span>Muhammad Fariq Arbia</span></h1>
+      <p>Seorang Pria Sigma dan Pelajar. Saya tinggal di Desa Trajaya dan 
+        <br> Sekolah di SMK AR-RAHMAT Jurusan RPL</p>
     </div>
-    <!-- NAVBAR DONE -->
+  </header>
 
-    <!-- CONTENT 1 --> 
-    <section id="HOME" class="hero">
-        <div class="hero-content">
-            <h1>Halo, Saya Muhammad F. Arbia</h1>
-            <p>Saya seorang siswa SMK Ar-Rahmat dari Jurusan RPL</p>
-            <img src="charles_leclerc-removebg-preview.png" class="img1">
-        </div>
-    </section>
-    <!-- CONTENT 1 END -->
-     
-    <!-- about -->
-   <section id="About">
-    <div class="tentang-saya">
-        <h2 class="tentang-siu"> Tentang Saya</h2>
-        <p class="tentang-siu">Saya adalah siswa SMK Ar-Rahmat dari jurusan RPL. Saya berasal dari desa Trajaya. MBTI saya ENTP. Saya memiliki ketertarikan ke dunia pemrograman karena itulah saya memilih jurusan RPL.</p>
+  <section id="features">
+    <div class="container">
+      <div class="feature">
+        <h3>PELAJAR YANG BEROTAK CIHUYY</h3>
+        <p>CIHUYY2X</p>
+      </div>
+      <div class="feature">
+        <h3>WEB DEV😁👆</h3>
+        <p>Masih Pemula Gwej</p>
+      </div>
+      <div class="feature">
+        <h3>PECINTA GEOGRAFI</h3>
+        <p>Loh KOK BISA? gatau lek</p>
+      </div>
+      <div class="feature">
+        <h3>SEJARAH LOVERS😁👆</h3>
+        <p>Sejarah bet gw😁👆</p>
+      </div>
     </div>
-    </section>
-    <!--about -->
+  </section>
 
-    <!--Contact-->
-
-<!--Contact-->
-
-    <!--SKILl-->
-    <section class="skills">
-        <h2 class="head2">Keahlian Saya</h2>
-        <div class="skills-grid">
-            <div class="skill">
-                <h3>Web Development</h3>
-                <p>HTML, CSS, dan C#</p>
-            </div>
-            <div class="skill">
-                <h3>Masak</h3>
-                <p>Hobi ke 2 saya ada memasak :).</p>
-            </div>
-            <div class="skill">
-                <h3>kepo lu</h3>
-                <p>hehehehe</p>
-            </div>
-        </div>
-    </section>
-
-    <!--KOntak-->
-    <section id="kontak" class="contact">
-        <h2>Kontak Saya</h2>
-        <form>
-            <input type="text" placeholder="Nama" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Pesan" required></textarea>
-            <button type="submit">Kirim Pesan</button>
-        </form>
-    </section>
-    <!--Kontak-->
-
-    <footer>
-        <p>&copy; Riko Slebew. Semua Ras Dilindungi.</p>
-    </footer>
+  <section id="portfolio">
+    <h2>Meme Cihuyy</h2>
+    <div class="portfolio-grid">
+      <img src="a54c6a7f-731d-4a0e-875d-609e230b7751.jpeg">
+      <img src="ddc0d51c-5aec-4284-b8eb-68b9358a3c77.jpeg" alt="">
+      <img src="Maaf ya.jpeg">
+      <img src="Meme.jpeg">
     </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-wrapper">
+      <div class="skill">
+        <h3>Web Design</h3>
+        <div class="skill-bar" style="width: 3%;"></div>
+      </div>
+      <div class="skill">
+        <h3>HTML/CSS</h3>
+        <div class="skill-bar" style="width: 78%;"></div>
+      </div>
+      <div class="skill">
+        <h3>Java</h3>
+        <div class="skill-bar" style="width: 1%;"></div>
+      </div>
+      <div class="skill">
+        <h3>Sigma</h3>
+        <div class="skill-bar" style="width: 100%;"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="kontak">
+  <section id="contact">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Nama" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Pesan" class="pesan">
+      <button type="submit" id="submit">Kirim</button>
+    </form>
+  </section>
+</div>
+
+  <footer>
+    <p>&copy; Riko Slebew.</p>
+  </footer>
+  <script src="main.js"></script>
 </body>
 </html>
