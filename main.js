@@ -12,7 +12,7 @@ const form = document.getElementById('form-telegram');
 
 const sendMessage = (text) => {
 
-  fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+  fetch(`https://api.telegram.org/bot7573597116:AAGExToje_wGYQrQyewS85v7rlaA3qyHwzc/sendMessage`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
