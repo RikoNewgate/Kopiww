@@ -5,24 +5,48 @@ document.querySelector('#contact-form').addEventListener('submit', (e) => {
     e.target.elements.message.value = '';
   });
 
-  const form = document.querySelector("form");
-  form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const name = document.querySelector("#name").value;
-      const email = document.querySelector("#email").value;
-      const message = document.querySelector("#message").value;
-      const telegram_message = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
-      fetch(`https://api.telegram.org/bot$7573597116:AAGExToje_wGYQrQyewS85v7rlaA3qyHwzc/sendMessage`, {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json'
-              },
-              body: JSON.stringify({
-                  chat_id: 6797462730,
-                  text: telegram_message
-              })
-      })
-          .catch(error => {
-              console.error('Error sending message:', error);
-      });
+const token = '7573597116:AAGExToje_wGYQrQyewS85v7rlaA3qyHwzc';
+const group_id = '6797462730';
+
+const form = document.getElementById('form-telegram');
+
+const sendMessage = (text) => {
+
+  fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      "chat_id": group_id,
+      "text": text,
+    })
+  }).then(res => {
+    if(!res.ok) {
+      throw new Error(res.statusText, res.status, res.url);
+    }
+    return res.json();
+  }).then(res => {
+    console.log(res);
+    alert('Pesan Berhasil Terkirim');
+  }).catch(err => {
+    console.log(err);
+    alert('Error: Gagal Mengirim Pesan');
   });
+}
+
+form.onsubmit = (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  let text = '';
+
+  for(const [key, val] of formData) {
+    text += `\n\n${key}:\n${val}`;
+  }
+
+  text = text.replace('\n\n', '');
+
+  sendMessage(text);
+}
