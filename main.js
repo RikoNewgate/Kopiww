@@ -1,18 +1,11 @@
-document.querySelector('#contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    e.target.elements.name.value = '';
-    e.target.elements.email.value = '';
-    e.target.elements.message.value = '';
-  });
-
 const token = '7573597116:AAGExToje_wGYQrQyewS85v7rlaA3qyHwzc';
-const group_id = '6797462730';
+const group_id = '-4727754773';
 
 const form = document.getElementById('form-telegram');
 
 const sendMessage = (text) => {
 
-  fetch(`https://api.telegram.org/bot7573597116:AAGExToje_wGYQrQyewS85v7rlaA3qyHwzc/sendMessage`, {
+  fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
